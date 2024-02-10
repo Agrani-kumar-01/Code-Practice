@@ -341,4 +341,22 @@
 //   3 2 1 0 1 2 3
 // 4 3 2 1 0 1 2 3 4
 
-
+const row = 5
+for(let i=1;i<=row;i++){
+  for(let space = 1;space<=row-i;space++){
+    process.stdout.write("  ")
+  }
+  let col = 1
+  let count = i
+  while(col<=2*i-1){
+    if(count>0){
+      process.stdout.write(`${Math.abs(count-col)} `)
+    }
+    else {
+      count = 0
+      process.stdout.write(`${count+col} `)
+    }
+    col++
+      }
+      console.log()
+  }
